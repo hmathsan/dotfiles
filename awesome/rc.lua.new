@@ -67,7 +67,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart Applications
-awful.spawn.with_shell("picom --experimental-backends --xrender-sync-fence --config ~/.config/awesome/themes/one_darker/config/picom.conf")
+awful.spawn.with_shell("picom --xrender-sync-fence")
 awful.spawn.with_shell("nitrogen --restore")
 
 

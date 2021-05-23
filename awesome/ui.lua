@@ -4,6 +4,7 @@ local awful = require("awful")
 
 -- Widget and layout library
 local wibox = require("wibox")
+local dpi = require("beautiful").xresources.apply_dpi
 
 -- Theme handling library
 local beautiful = require("beautiful")
@@ -22,13 +23,17 @@ client.connect_signal("request::titlebars", function(c)
             awful.mouse.client.resize(c)
         end)
     )
+    local titlebar = awful.titlebar(c, {
+      size = dpi(30)
+    })
 
-    awful.titlebar(c) : setup {
-        { -- Left
-            awful.titlebar.widget.iconwidget(c),
-            buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal
-        },
+    titlebar: setup {
+        -- { -- Left
+        --     awful.titlebar.widget.iconwidget(c),
+        --     buttons = buttons,
+        --     layout  = wibox.layout.fixed.horizontal
+        -- },
+        nil,
         { -- Middle
             { -- Title
                 align  = "center",
@@ -38,12 +43,15 @@ client.connect_signal("request::titlebars", function(c)
             layout  = wibox.layout.flex.horizontal
         },
         { -- Right
-            awful.titlebar.widget.floatingbutton (c),
-            awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
-            awful.titlebar.widget.closebutton    (c),
-            layout = wibox.layout.fixed.horizontal()
+            -- awful.titlebar.widget.floatingbutton (c),
+            -- awful.titlebar.widget.maximizedbutton(c),
+            -- awful.titlebar.widget.stickybutton   (c),
+            -- awful.titlebar.widget.ontopbutton    (c),
+            -- awful.titlebar.widget.closebutton    (c),
+            wibox.layout.margin(awful.titlebar.widget.minimizebutton(c), dpi(4), dpi(5), dpi(5), dpi(5)),
+            wibox.layout.margin(awful.titlebar.widget.maximizedbutton(c), dpi(4), dpi(5), dpi(5), dpi(5)),
+            wibox.layout.margin(awful.titlebar.widget.closebutton(c), dpi(10), dpi(5), dpi(5), dpi(5)),
+            layout = wibox.layout.fixed.horizontal
         },
         layout = wibox.layout.align.horizontal
     }
