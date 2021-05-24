@@ -19,7 +19,7 @@ beautiful.init("/home/matheus/.config/awesome/themes/one_darker/theme.lua")
 require("error_handling")
 
 -- Default editor and terminal
-terminal = "gnome-terminal"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "code"
 editor_cmd = terminal .. " -e " .. editor
 
