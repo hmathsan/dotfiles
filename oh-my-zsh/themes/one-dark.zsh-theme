@@ -1,0 +1,1 @@
+/home/matheus/.oh-my-zsh/themes/one-dark.zsh-theme
