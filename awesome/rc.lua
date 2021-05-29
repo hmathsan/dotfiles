@@ -70,7 +70,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("picom --experimental-backends --xrender-sync-fence --config ~/.config/awesome/themes/one_darker/config/picom.conf")
 awful.spawn.with_shell("nitrogen --restore")
 
-
+awful.spawn.with_shell("~/.config/polybar/launch.sh")
 -- Unused but maybe is important idk --
 
 -- Keyboard map indicator and switcher

@@ -27,8 +27,11 @@ theme.name = "one_darker"
 theme.useless_gap = 7
 
 -- Font
-theme.font = "SF Pro Text 9"
-theme.title_font = "SF Pro Display Medium 10"
+--theme.font = "SF Pro Text 9"
+--theme.title_font = "SF Pro Display Medium 10"
+
+theme.font = "monospace 9"
+--theme.title_font = "SF Mono 10"
 
 -- Background
 theme.bg_normal = "#202020"
