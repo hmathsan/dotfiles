@@ -12,5 +12,3 @@
 - [pfetch](https://github.com/dylanaraps/pfetch) - A minimalist neofetch alternative
 - [pipes-rs](https://github.com/lhvy/pipes-rs) - A pipes.sh alternative written in rust
 - [htop](https://htop.dev/) - A terminal process viewer
-
-Dotfiles for my Arch linux setup
